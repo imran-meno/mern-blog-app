@@ -105,55 +105,95 @@
 }
 
 /* ====================== LOGIN & SIGNUP ====================== */
+/* ======= LOGIN & SIGNUP PAGE ======= */
 .login_div,
 .SignUP_main {
   background-image: url('../src/assets/circles.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
-}
-
-.Login_1,
-.SignUp_inputs {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
+/* Main container box */
 .main_input,
 .main_signup {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #8454ED;
-  height: 60vh;
-  width: 80vh;
-  margin-top: 20vh;
-  border-radius: 10px;
+  width: 400px;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
+/* Input fields */
 input {
-  border-radius: 5px;
+  border-radius: 8px;
   outline: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  height: 30px;
-  width: 300px;
+  margin: 12px 0;
+  height: 45px;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
   border: none;
-  font-size: 15px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
-button {
-  height: 30px;
-  width: 100px;
-  margin-bottom: 15px;
-  font-size: 15px;
-  cursor: pointer;
+input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px rgba(132, 84, 237, 0.5);
 }
+
+/* Button styling */
+button {
+  height: 45px;
+  width: 150px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #8454ED;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #6c43d8;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .main_input,
+  .main_signup {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  input {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  button {
+    width: 120px;
+    font-size: 15px;
+  }
+}
+
 
 /* ====================== CREATE POST ====================== */
 .create_main {
