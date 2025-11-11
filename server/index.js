@@ -77,7 +77,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // ✍️ Create Blog (Protected)
-app.post('/create', verifyToken, upload.single('image'), async (req, res) => {
+app.post('/create', upload.single('image'), async (req, res) => {
   try {
     const { tech, heading, detail } = req.body;
     const imagePath = req.file ? `/uploads/${req.file.filename}` : '';
